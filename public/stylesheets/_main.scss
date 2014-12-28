@@ -1,0 +1,143 @@
+#wrapper{
+    max-width: 20em;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.numJugadores {
+  @include input__normal;
+}
+
+.enviarJugadores{
+    @include button__lg;
+
+}
+
+.errorJugador{
+  padding: 10px 12px;
+  color:$red;
+  font-size: 1.4em;
+}
+
+.nombreJugador{
+  @include input__normal;
+}
+
+.enviarNombres{
+    @include button__lg;
+}
+
+
+.chinchonButton {
+    @include button__lg;
+}
+
+#puntuaciones {
+    max-width: 35em;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .jugador{
+        margin-top: 0.625em;
+    }
+
+  label {
+    display: inline-block;
+    text-align: right;
+    width: 6.25em;
+    font-size:1.4em;
+    font-style: italic;
+    }
+}
+
+.inputPuntos {
+    @include input__android;
+    }
+
+.winner {
+    max-width: 30em;
+    overflow: hidden;
+    margin: 0 auto;
+
+    p{
+        text-transform: uppercase;
+        color:$white;
+        font-size:2em;
+        text-align: center;
+
+    }
+
+    button {
+        @include button__lg;
+    }
+
+}
+
+span{
+    font-size:1.4em;
+    padding-right: 10px;
+    font-style:italic;
+}
+
+/*PORTRAIT*/
+@media only screen and (min-width:$br1){
+
+.inputPuntos {
+    @include input__android($width:25%,$size:1.2em);
+
+  }
+
+.chinchonButton {
+    @include button__normal($width:6%);
+}
+
+}
+
+/*LANDSCAPE*/
+@media only screen
+and (min-width : $br2) {
+
+.inputPuntos {
+    @include input__android($width:25%,$size:1.2em);
+    }
+
+.chinchonButton {
+    @include button__normal($width:25%);
+}
+
+
+
+
+}
+
+
+/*IPAD LANDSCAPE & PORTRAIT*/
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+.inputPuntos {
+    @include input__android($width:25%,$size:1.2em);
+    }
+
+.chinchonButton {
+    @include button__normal;
+}
+
+
+}
+
+
+
+/*DESKTOP*/
+
+@media only screen
+and (min-width : $br5) {
+
+.inputPuntos {
+    @include input__android;
+
+    }
+
+
+}

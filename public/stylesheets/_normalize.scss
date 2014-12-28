@@ -1,0 +1,41 @@
+*,
+*:before,
+*:after{
+   box-sizing: border-box;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+/* hides the spin-button for chrome*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body{
+  background: -webkit-linear-gradient(100deg,$green, $white);
+  background: -o-linear-gradient(100deg,$green, $white);
+  background: linear-gradient(100deg,$green, $white); /* For Safari 5.1 to 6.0 */
+
+     /* For Safari 5.1 to 6.0 */
+
+    overflow: hidden;
+
+}
+
+h1{
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight:bold;
+    font-size: 1.8em;
+    color: #ffffff;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 800;
+    line-height: 36px;
+    margin: 0 0 24px;
+    text-align: center;
+}

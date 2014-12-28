@@ -1,0 +1,48 @@
+@mixin input__normal($width:100%){
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: $width;
+    font-size: 1.4em;
+    padding-right: 5px;
+    text-align: center;
+}
+
+@mixin button__lg ($background__colour:$green,$border__colour:$green-border,$width:100%) {
+
+    width: 100%;
+    padding:6px 12px;
+    font-size:1.4em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: $background__colour;
+    border-color:$border__colour;
+    border: 1px solid transparent;
+    color:$white;
+
+}
+
+
+@mixin input__android($width:33%,$size:1.4em,$colour__a:$gray__input,$colour__b:$gray__input){
+
+  width: $width;
+  font-size: 1.4em;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: none;
+  background: bottom center linear-gradient($colour__a, $colour__b) no-repeat;
+  background-size: 1px 6px, 1px 1px, 1px 6px;
+  text-align:center;
+
+}
+
+
+@mixin button__normal($width:33%){
+  @include button__lg;
+  width:$width;
+  padding:6px 6px;
+  font-size:1em;
+  border-radius:4px;
+}
